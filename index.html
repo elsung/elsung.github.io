@@ -20,7 +20,7 @@
 
     </header>
 
-    <div class="container Site-content">
+    <div id="container" class="container Site-content">
       <!-- Filter Menu -->
       <div class="button-group filter-button-group">
         <button data-filter="*" class="is-checked">All</button>
@@ -153,7 +153,7 @@
     }
 
     $( document ).ready(function(){
-
+      var container = document.querySelector('#container');
       imagesLoaded(container, function(){
 
 
