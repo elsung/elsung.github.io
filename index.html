@@ -137,6 +137,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.min.js" charset="utf-8"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
     <!-- Magnific Popup core JS file -->
@@ -151,42 +152,47 @@
       return hashFilter && decodeURIComponent( hashFilter );
     }
 
-    $( function() {
+    $( document ).ready(function(){
 
-      var $grid = $('.grid');
+      imagesLoaded(container, function(){
 
-      // bind filter button click
-      var $filters = $('.filter-button-group').on( 'click', 'button', function() {
-        var filterAttr = $( this ).attr('data-filter');
-        // set filter in hash
-        location.hash = 'filter=' + encodeURIComponent( filterAttr );
-      });
 
-      var isIsotopeInit = false;
+        var $grid = $('.grid');
 
-      function onHashchange() {
-        var hashFilter = getHashFilter();
-        if ( !hashFilter && isIsotopeInit ) {
-          return;
-        }
-        isIsotopeInit = true;
-        // filter isotope
-        $grid.isotope({
-          itemSelector: '.grid-item',
-          filter: hashFilter
+        // bind filter button click
+        var $filters = $('.filter-button-group').on( 'click', 'button', function() {
+          var filterAttr = $( this ).attr('data-filter');
+          // set filter in hash
+          location.hash = 'filter=' + encodeURIComponent( filterAttr );
         });
-        // set selected class on button
-        if ( hashFilter ) {
-          $filters.find('.is-checked').removeClass('is-checked');
-          $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+
+        var isIsotopeInit = false;
+
+        function onHashchange() {
+          var hashFilter = getHashFilter();
+          if ( !hashFilter && isIsotopeInit ) {
+            return;
+          }
+          isIsotopeInit = true;
+          // filter isotope
+          $grid.isotope({
+            itemSelector: '.grid-item',
+            filter: hashFilter
+          });
+          // set selected class on button
+          if ( hashFilter ) {
+            $filters.find('.is-checked').removeClass('is-checked');
+            $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+          }
         }
-      }
 
-      $(window).on( 'hashchange', onHashchange );
-      // trigger event handler to init Isotope
-      onHashchange();
+        $(window).on( 'hashchange', onHashchange );
+        // trigger event handler to init Isotope
+        onHashchange();
 
+      });
     });
+
 
     $('.popup').magnificPopup({
       delegate: 'a', // child items selector, by clicking on it popup will open
@@ -194,6 +200,7 @@
       type: 'image'
       // other options
     });
+
 
 
     </script>
