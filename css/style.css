@@ -1,0 +1,337 @@
+
+body {
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  left: -300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url(../images/nasa-rise1.jpg) 0% 0% repeat;
+  margin: 0px;
+
+  animation: AnimationName 70s linear infinite;
+  background-size: 130% 130%;
+}
+
+@keyframes AnimationName {
+  from {
+     transform: translateX(0);
+   }
+   to {
+     transform: translateX(200px);
+   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+header {
+  /*background: url(../images/header.jpg) no-repeat center center;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  text-align: center;
+  /*background: #DDD8D8;*/
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+
+
+header h1 {
+  color: #FFF;
+  font-size: 3.2em;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  line-height: 2em;
+
+  letter-spacing: 1em;
+  padding-left: 1em;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-shadow: 6px 6px 0px #120A13;
+
+  /*text-shadow: 6px 6px 0px #FF0166;*/
+
+
+  /*text-shadow: 5px 5px 0px #00e6e6,*/
+                /*10px 10px 0px #FF0166;*/
+
+}
+
+/* filters styling */
+
+
+.filter-button-group {
+  text-align: center;
+  padding: 20px;
+  /*border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;*/
+
+  background: rgba(1, 1, 1, 0.26);
+  outline-offset: 10px;
+  outline: 1px solid #20142A;
+  margin-bottom: 30px;
+}
+
+.button-group button, .button-group a, .button-group a:visited{
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+
+
+  color: #FFF;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.4s ease-in-out;
+
+
+  text-shadow: 2px 2px 0px #120A13;
+
+
+}
+
+.button-group button {
+  background: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Styling the hover and current active filter */
+.button-group button:hover, .button-group .is-checked  {
+  cursor: pointer;
+  background: #FFF;
+  color: #000;
+  text-shadow: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-group button:focus, .button-group button:active {
+
+}
+
+
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  color: #FFF;
+  letter-spacing: 0.2em;
+  margin-bottom: 3.3em;
+}
+
+.home {
+  text-align: center;
+}
+
+
+.grid {
+  margin: 0 auto;
+  padding: 0px 20px;
+  text-align: center;
+
+}
+
+.grid-item {
+  text-align: center;
+  width: 30.5%;
+  margin: 0.61% 0.61% 0.4% 0.61%;
+  position: relative;
+
+  padding: 0px;
+  /*display: none;*/
+
+}
+
+.grid-item img {
+  width: 100%;
+  position: relative;
+  /*box-shadow: 0px 0px 2px 2px #ddd;*/
+}
+
+.grid-item a {
+    text-decoration: none;
+}
+.grid-item a:visited {
+  color: inherit;
+}
+
+
+
+.grid-item .projtitle {
+    /*margin-top:0px;
+    padding: 20px;
+    color: #000;
+    background: #FFF;*/
+
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0px;
+
+  padding: 10px;
+
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.8;*/
+  outline-offset: 8px;
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+
+}
+
+
+.grid-item.storyboards h6, .grid-item.assignments h6{
+  display: inherit;
+}
+
+
+footer {
+  color: #FFF;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+}
+
+footer a, footer a:visited{
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  color: #120A13;
+  background: #FFF;
+  outline-offset: 8px;
+  outline: 2px solid #FFF;
+  padding: 20px;
+
+  transition: all 0.8s ease-in-out;
+}
+
+footer a:hover {
+  background: #281c5c;
+  color: #FFF;
+  outline-color: #281c5c;
+
+
+  transition: all 0.8s ease-in-out;
+}
+
+
+
+/*Flexbox and footerfix*/
+
+/**
+ * 1. Avoid the IE 10-11 `min-height` bug.
+ * 2. Set `flex-shrink` to `0` to prevent some browsers from
+ *    letting these items shrink to smaller than their content's default
+ *    minimum size. See http://bit.ly/1Mn35US for details.
+ * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+ */
+
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 1, 3 */
+  min-height: 100vh;
+}
+
+.Site-header,
+.Site-footer {
+  flex: none; /* 2 */
+}
+
+.Site-content {
+  flex: 1 0 auto; /* 2 */
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+}
+.Site-content::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
+}
+@media (--break-lg) {
+  .Site-content {
+    padding-top: var(--space-lg);
+  }
+  .Site-content::after {
+    margin-top: var(--space-lg);
+  }
+}
+
+.Site-content--full {
+  padding: 0;
+}
+.Site-content--full::after {
+  content: none;
+}
+
+
+
+/*Customized mfp popup styles*/
+
+.mfp-content {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.mfp-bottom-bar {
+
+}
+
+/* Mobile*/
+@media screen and (max-width: 768px) {
+
+   header h1 {
+     font-size: 1.8em;
+   }
+
+   .button-group button {
+     width: 100%;
+     margin-bottom: 20px;
+   }
+
+  .grid {
+    padding: 0px;
+  }
+
+   .grid-item {
+    width: 100%;
+    margin-bottom: 20px;
+   }
+
+}
