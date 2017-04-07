@@ -14,7 +14,7 @@ body {
   margin: 0px;
 
   animation: AnimationName 70s linear infinite;
-  background-size: 160%;
+  background-size: 200%;
 }
 
 @keyframes AnimationName {
