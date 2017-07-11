@@ -137,7 +137,6 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.min.js" charset="utf-8"></script>
 
     <!-- Magnific Popup core JS file -->
     <script src="magnific-popup/jquery.magnific-popup.js"></script>
@@ -153,43 +152,42 @@
 
     $( document ).ready(function(){
       var container = document.querySelector('#container');
-      imagesLoaded(container, function(){
 
 
-        var $grid = $('.grid');
 
-        // bind filter button click
-        var $filters = $('.filter-button-group').on( 'click', 'button', function() {
-          var filterAttr = $( this ).attr('data-filter');
-          // set filter in hash
-          location.hash = 'filter=' + encodeURIComponent( filterAttr );
-        });
+      var $grid = $('.grid');
 
-        var isIsotopeInit = false;
-
-        function onHashchange() {
-          var hashFilter = getHashFilter();
-          if ( !hashFilter && isIsotopeInit ) {
-            return;
-          }
-          isIsotopeInit = true;
-          // filter isotope
-          $grid.isotope({
-            itemSelector: '.grid-item',
-            filter: hashFilter
-          });
-          // set selected class on button
-          if ( hashFilter ) {
-            $filters.find('.is-checked').removeClass('is-checked');
-            $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-          }
-        }
-
-        $(window).on( 'hashchange', onHashchange );
-        // trigger event handler to init Isotope
-        onHashchange();
-
+      // bind filter button click
+      var $filters = $('.filter-button-group').on( 'click', 'button', function() {
+        var filterAttr = $( this ).attr('data-filter');
+        // set filter in hash
+        location.hash = 'filter=' + encodeURIComponent( filterAttr );
       });
+
+      var isIsotopeInit = false;
+
+      function onHashchange() {
+        var hashFilter = getHashFilter();
+        if ( !hashFilter && isIsotopeInit ) {
+          return;
+        }
+        isIsotopeInit = true;
+        // filter isotope
+        $grid.isotope({
+          itemSelector: '.grid-item',
+          filter: hashFilter
+        });
+        // set selected class on button
+        if ( hashFilter ) {
+          $filters.find('.is-checked').removeClass('is-checked');
+          $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+        }
+      }
+
+      $(window).on( 'hashchange', onHashchange );
+      // trigger event handler to init Isotope
+      onHashchange();
+
     });
 
 
@@ -201,13 +199,7 @@
     });
 
 
-    // contact workaround
-    var username = "eric";
-    var hostname = "ericlsung.com";
-    var linktext = "contact me";
-    $('footer').html(
-      "<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext  + "</a>"
-    );
+
 
 
 
