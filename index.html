@@ -147,10 +147,6 @@
 
 
 
-    $(function() {
-        $('body').removeClass('fade-out');
-    });
-
 
     function getHashFilter() {
       var hash = location.hash;
@@ -160,9 +156,9 @@
       return hashFilter && decodeURIComponent( hashFilter );
     }
 
-    $( document ).ready(function(){
+    $( window ).on("load", function(){
       var container = document.querySelector('#container');
-
+      $('body').removeClass('fade-out');
 
 
       var $grid = $('.grid');
