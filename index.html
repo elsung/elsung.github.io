@@ -12,6 +12,9 @@
 
   </head>
   <body class="Site">
+
+    <script>document.body.className += ' fade-out';</script>
+
     <div class="bg"></div>
 
     <header data-filter="none">
@@ -136,11 +139,19 @@
     <footer>
     </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha256-+WFRRTv1uGEhn6sykgWJyTBYDE8cQn8uAj50Kefp9II=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha256-+WFRRTv1uGEhn6sykgWJyTBYDE8cQn8uAj50Kefp9II=" crossorigin="anonymous"></script>
     <!-- Magnific Popup core JS file -->
     <script src="magnific-popup/jquery.magnific-popup.js"></script>
 
     <script type="text/javascript">
+
+
+
+    $(function() {
+        $('body').removeClass('fade-out');
+    });
+
+
     function getHashFilter() {
       var hash = location.hash;
       // get filter=filterName
