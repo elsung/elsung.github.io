@@ -18,7 +18,7 @@ body.fade-out {
   bottom: 0;
   z-index: -1;
   /*background: #120A13 url(../images/hugostar.jpg) 0% 0% repeat;*/
-  background: #120A13;
+  background: #f4eeeb;
   margin: 0px;
 
   animation: AnimationName 70s linear infinite;
@@ -93,9 +93,11 @@ header h1 {
   /*border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;*/
 
-  background: rgba(1, 1, 1, 0.26);
-  outline-offset: 10px;
-  outline: 1px solid #20142A;
+  /* background: #000; */
+
+
+  /* outline-offset: 10px;
+  outline: 1px solid #FFF; */
   margin-bottom: 30px;
 }
 
@@ -106,19 +108,27 @@ header h1 {
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
   border: none;
+  border-radius: 20px;
   outline: none;
   padding: 10px 20px;
 
 
-  color: #FFF;
+  color: #404040;
   cursor: pointer;
   text-decoration: none;
 
   transition: all 0.4s ease-in-out;
 
 
-  text-shadow: -2px 2px 0px #120A13;
+  /* text-shadow: -2px 2px 0px #120A13; */
 
+
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0.6),
+    0 0.3em 0.5em -0.2em rgba(47,131,189,1),
+    0 1em 2em -0.75em rgba(47,131,189,0.75),
+    0 1em 3em -0.5em rgba(47,131,189,0.5),
+    0 3em 3em -0.25em rgba(47,131,189,0.2);
 
 }
 
@@ -132,10 +142,18 @@ header h1 {
 /* Styling the hover and current active filter */
 .button-group button:hover, .button-group .is-checked  {
   cursor: pointer;
-  background: #FFF;
-  color: #000;
+  background: rgba(12, 128, 208, 1);
+  color: #FFF;
   text-shadow: none;
   transition: all 0.4s ease-in-out;
+
+
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0),
+    0 0.3em 0.5em -0.2em rgba(47,131,189,1),
+    0 1em 2em -0.75em rgba(47,131,189,0.75),
+    0 1em 3em -0.5em rgba(47,131,189,0.5),
+    0 3em 3em -0.25em rgba(47,131,189,0.2);
 }
 
 .button-group button:focus, .button-group button:active {
@@ -159,19 +177,20 @@ h3 {
 
 .grid {
   margin: 0 auto;
-  padding: 0px 20px;
+  padding: 0px 0px;
   text-align: center;
 
 }
 
 .grid-item {
   text-align: center;
-  width: 30.5%;
-  margin: 0.61% 0.61% 0.4% 0.61%;
+  width: 28%;
+  margin: 1.8%;
   position: relative;
 
   padding: 0px;
   /*display: none;*/
+  border: 8px solid #FFF;
 
 }
 
@@ -179,6 +198,14 @@ h3 {
   width: 100%;
   position: relative;
   /*box-shadow: 0px 0px 2px 2px #ddd;*/
+
+
+  box-shadow:
+  inset 0 7em 10em -5em rgba(255,255,255,0.6),
+  0 0.3em 0.5em -0.2em rgba(47,131,189,1),
+  0 1em 2em -0.75em rgba(47,131,189,0.75),
+  0 1em 3em -0.5em rgba(47,131,189,0.5),
+  0 3em 3em -0.25em rgba(47,131,189,0.2);
 }
 
 .grid-item a {
