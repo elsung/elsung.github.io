@@ -449,7 +449,11 @@ footer a:hover {
 }
 
 /* Mobile*/
-@media screen and (max-width: 763px) {
+@media screen
+  and (min-device-width: 375px)
+  and (max-width: 763px)
+  and (-webkit-min-device-pixel-ratio: 1)
+  {
 
    header {
      height: 26vh;
