@@ -17,7 +17,6 @@ body.fade-out {
   top: 0;
   bottom: 0;
   z-index: -1;
-  /*background: #120A13 url(../images/hugostar.jpg) 0% 0% repeat;*/
   background: #f4eeeb;
   margin: 0px;
 
@@ -43,19 +42,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header {
-  /* background: url(../images/cali-city.jpg) no-repeat center center; */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #f4eeeb;
 
   text-align: center;
-  /*background: #DDD8D8;*/
   position: relative;
   display: inline-block;
   width: 100%;
   margin-bottom: 10px;
-
   height: 50vh;
 
 }
@@ -97,7 +90,6 @@ header .title h2 {
   padding-left: 2em;
   margin-top: -19vh;
   padding-top: 30px;
-  /* border-top : 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 
@@ -108,13 +100,10 @@ header .title h2 {
   width: 100%; /* Set video container element width here */
   height: 100%; /* Set video container element height here */
   overflow: hidden;
-  background: #111; /* bg color, if video is not high enough */
+  background: #f4eeeb; /* bg color, if video is not high enough */
 
-
-      /* clip-path: polygon(3% 8%, 7% 2%, 83% 18%, 86% 26%, 98% 90%, 92% 98%, 7% 78%, 4% 70%); */
-
-      -webkit-clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
-      clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
+  -webkit-clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
+  clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
 
 
 }
@@ -184,14 +173,6 @@ header .title h2 {
 .filter-button-group {
   text-align: center;
   padding: 20px;
-  /*border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;*/
-
-  /* background: #000; */
-
-
-  /* outline-offset: 10px;
-  outline: 1px solid #FFF; */
   margin-top: 38px;
   margin-bottom: 30px;
 }
@@ -214,8 +195,6 @@ header .title h2 {
 
   transition: all 0.4s ease-in-out;
 
-
-  /* text-shadow: -2px 2px 0px #120A13; */
 
 
     box-shadow:
@@ -279,12 +258,11 @@ h3 {
 
 .grid-item {
   text-align: center;
-  width: 28.3%;
+  width: 28%;
   margin: 1.8%;
   position: relative;
 
   padding: 0px;
-  /*display: none;*/
   border: 8px solid #FFF;
 
 }
@@ -292,7 +270,6 @@ h3 {
 .grid-item img {
   width: 100%;
   position: relative;
-  /*box-shadow: 0px 0px 2px 2px #ddd;*/
 
 
   box-shadow:
@@ -313,10 +290,6 @@ h3 {
 
 
 .grid-item .projtitle {
-    /*margin-top:0px;
-    padding: 20px;
-    color: #000;
-    background: #FFF;*/
 
   color: #FFF;
   position: absolute;
@@ -381,52 +354,6 @@ footer a:hover {
 
 
 
-/*Flexbox and footerfix*/
-
-/**
- * 1. Avoid the IE 10-11 `min-height` bug.
- * 2. Set `flex-shrink` to `0` to prevent some browsers from
- *    letting these items shrink to smaller than their content's default
- *    minimum size. See http://bit.ly/1Mn35US for details.
- * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
- */
-
-
-.Site {
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* 1, 3 */
-  min-height: 100vh;
-  padding: 0px;
-  margin: 0px;
-}
-
-.Site-header,
-.Site-footer {
-  flex: none; /* 2 */
-}
-
-.Site-content {
-  flex: 1 0 auto; /* 2 */
-  padding: var(--space) var(--space) 0;
-  width: 100%;
-}
-.Site-content::after {
-  content: '\00a0'; /* &nbsp; */
-  display: block;
-  margin-top: var(--space);
-  height: 0px;
-  visibility: hidden;
-}
-
-.Site-content--full {
-  padding: 0;
-}
-.Site-content--full::after {
-  content: none;
-}
-
-
 
 /*Customized mfp popup styles*/
 
@@ -476,4 +403,61 @@ footer a:hover {
     margin-bottom: 20px;
    }
 
+}
+
+
+
+
+
+/*Flexbox and footerfix*/
+
+/**
+ * 1. Avoid the IE 10-11 `min-height` bug.
+ * 2. Set `flex-shrink` to `0` to prevent some browsers from
+ *    letting these items shrink to smaller than their content's default
+ *    minimum size. See http://bit.ly/1Mn35US for details.
+ * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+ */
+
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 1, 3 */
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+.Site-header,
+.Site-footer {
+  flex: none; /* 2 */
+}
+
+.Site-content {
+  flex: 1 0 auto; /* 2 */
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+}
+.Site-content::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
+}
+@media (--break-lg) {
+  .Site-content {
+    padding-top: var(--space-lg);
+  }
+  .Site-content::after {
+    margin-top: var(--space-lg);
+  }
+}
+
+.Site-content--full {
+  padding: 0;
+}
+.Site-content--full::after {
+  content: none;
 }
