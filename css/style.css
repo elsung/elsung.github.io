@@ -380,15 +380,15 @@ footer a:hover {
    }
 
    header .title h1 {
-     font-size: 40px;
+     font-size: 56px;
      line-height: 1em;
-     margin-top: 10vh;
+     margin-top: 4vh;
      text-shadow: 0px 0px 2px #555;
    }
    header .title h2 {
      font-size: 25px;
      line-height: 2em;
-     margin-top: -12vh;
+     margin-top: -6vh;
    }
 
    .button-group button {
