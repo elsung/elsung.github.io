@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header {
-  /*background: url(../images/header.jpg) no-repeat center center;*/
+  background: url(../images/cali-city.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -61,27 +61,18 @@ header {
 
 
 header h1 {
-  color: #FFF;
+  color: #000;
   font-size: 3em;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  line-height: 2em;
+  line-height: 6em;
 
   letter-spacing: 0.7em;
   padding-left: 1em;
 
   margin-left: auto;
   margin-right: auto;
-
-  text-shadow: -4px 4px 0px #120A13;
-
-  /*text-shadow: 6px 6px 0px #FF0166;*/
-
-
-  /*text-shadow: 5px 5px 0px #00e6e6,*/
-                /*10px 10px 0px #FF0166;*/
-
 }
 
 /* filters styling */
@@ -98,6 +89,7 @@ header h1 {
 
   /* outline-offset: 10px;
   outline: 1px solid #FFF; */
+  margin-top: 38px;
   margin-bottom: 30px;
 }
 
@@ -184,7 +176,7 @@ h3 {
 
 .grid-item {
   text-align: center;
-  width: 28%;
+  width: 28.3%;
   margin: 1.8%;
   position: relative;
 
@@ -302,6 +294,8 @@ footer a:hover {
   flex-direction: column;
   height: 100%; /* 1, 3 */
   min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
 }
 
 .Site-header,
