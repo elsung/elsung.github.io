@@ -451,8 +451,8 @@ footer a:hover {
 /* Mobile*/
 @media only screen
   and (min-device-width: 375px)
-  and (max-width: 763px)
-  and (-webkit-min-device-pixel-ratio: 1)
+  and (max-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 0)
   {
 
    header {
