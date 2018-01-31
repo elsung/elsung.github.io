@@ -418,14 +418,6 @@ footer a:hover {
   height: 0px;
   visibility: hidden;
 }
-@media (--break-lg) {
-  .Site-content {
-    padding-top: var(--space-lg);
-  }
-  .Site-content::after {
-    margin-top: var(--space-lg);
-  }
-}
 
 .Site-content--full {
   padding: 0;
@@ -453,7 +445,6 @@ footer a:hover {
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 812px)
-  and (max-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3)
   {
 
