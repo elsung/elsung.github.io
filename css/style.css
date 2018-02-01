@@ -101,7 +101,7 @@ header .title h2 {
   width: 100%; /* Set video container element width here */
   height: 100%; /* Set video container element height here */
   overflow: hidden;
-  background: #f4eeeb url('../images/vidbg.png') center center no-repeat; /* bg color, if video is not high enough */
+  background: #f4eeeb url('../images/vidbg.jpg') center center no-repeat; /* bg color, if video is not high enough */
 
   -webkit-clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
   clip-path: polygon(50% 6%, 100% 20%, 98% 65%, 50% 100%, 2% 65%, 0% 20%);
