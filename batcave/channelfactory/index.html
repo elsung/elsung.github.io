@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ChannelFactory - React Component Sample </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+
+  <script type="text/babel">
+
+  /* =======================
+  Comp Inline Custom Styles
+  ========================== */
+
+
+  // Main Style
+  const mainStyle = {
+    // fontFamily: 'Arial',
+    // margin: '0 auto'
+  };
+
+  // Head Style
+  const headStyle = {
+
+  };
+
+  // Hero Style
+  const heroStyle = {
+
+  };
+
+  // Content Style
+  const contentStyle = {
+
+  };
+
+  // Left Style
+  const leftStyle = {
+
+  };
+
+  // Right Style
+  const rightStyle = {
+
+  };
+
+
+
+  /* =======================
+            Components
+  ========================== */
+
+
+  // Main Parent Wrap Component
+  class MainPage extends React.Component {
+      render() {
+          return (
+            <div className="Main" style= {mainStyle}>
+              <Headcomp />
+              <Herocomp />
+              <Contentcomp />
+            </div>
+          );
+      }
+  }
+
+
+  // Header Component
+  class Headcomp extends React.Component {
+      render() {
+          return (
+            <div className="head" style= {headStyle}>
+              <div className="hamburger">
+                <i className="fas fa-bars"></i>
+              </div>
+              <div className="breadcrumb">
+                Research
+                  <span className="arrow">></span>
+                Channels
+                  <span className="arrow">></span>
+                <span className="active">Unbox Therapy</span>
+              </div>
+              <div className="logo">
+                <img src="img/logo.png" alt=""/>
+              </div>
+            </div>
+          );
+      }
+  }
+
+  // Hero Component
+  class Herocomp extends React.Component {
+      render() {
+          return (
+            <div className="hero" style= {heroStyle}>
+              <h1>
+                <span className="bold">
+                  Top 100</span> Videos
+              </h1>
+              <h5>based on views</h5>
+            </div>
+          );
+      }
+  }
+
+
+  // Left Content Component
+  class Contentcomp extends React.Component {
+      render() {
+          return (
+            <div className="content" style= {contentStyle}>
+              < Leftcomp />
+              < Rightcomp />
+            </div>
+          );
+      }
+  }
+
+
+
+    // Left Content Component
+    class Leftcomp extends React.Component {
+        render() {
+            return (
+              <div className="left" style= {leftStyle}>
+                <div className="category">
+                  <h1>Category</h1>
+                  <ul>
+                    <li><i className="far fa-dot-circle active"></i>
+                      All Categories
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+                    <li><i className="far fa-circle"></i>
+                      Entertainment
+                    </li>
+
+                  </ul>
+                </div>
+
+              </div>
+            );
+        }
+    }
+
+    // Right Content Component
+    class Rightcomp extends React.Component {
+        render() {
+            return (
+              <div className="right" style= {rightStyle}>
+                <div className="toprow">
+                  <div className="rowtab active">
+                  Monthly <i className="fas fa-info-circle"></i>
+                  </div>
+                  <div className="rowtab">
+                  Weekly <i className="fas fa-info-circle"></i>
+                  </div>
+                  <div className="rowtab">
+                  Daily <i className="fas fa-info-circle"></i>
+                  </div>
+                </div>
+
+
+                <div className="vidcomp">
+                  <div className="vidnum">
+                    <div className="num">
+                    <span>1</span>
+                    </div>
+                    <i className="fas fa-chevron-circle-down"></i>
+                  </div>
+                  <div className="vidthumb">
+                      <img className="thumb" src="img/thumb.png" alt=""/>
+                      <div className="thumbdesc">
+                        <div className="thumbtitle">
+                          Kanye West & Lil Pump Ft Adele Givens - "I Love It" (Official Video)
+                        </div>
+                        <div className="report">
+                        <i className="fas fa-flag"></i>
+                        Reason:<i className="fas fa-info-circle"></i></div>
+                      </div>
+
+                  </div>
+                  <div className="vidgraph">
+                    <img src="img/graph.png" alt=""/>
+                  </div>
+                  <div className="vidstats">
+                    <img src="img/stats.png" alt=""/>
+                  </div>
+                </div>
+
+                <div className="vidcomp">
+                  <div className="vidnum">
+                    <div className="num">
+                    <span>1</span>
+                    </div>
+                    <i className="fas fa-chevron-circle-down"></i>
+                  </div>
+                  <div className="vidthumb">
+                      <img className="thumb" src="img/thumb.png" alt=""/>
+                      <div className="thumbdesc">
+                        <div className="thumbtitle">
+                          Kanye West & Lil Pump Ft Adele Givens - "I Love It" (Official Video)
+                        </div>
+                        <div className="report">
+                        <i className="fas fa-flag"></i>
+                        Reason:<i className="fas fa-info-circle"></i></div>
+                      </div>
+
+                  </div>
+                  <div className="vidgraph">
+                    <img src="img/graph.png" alt=""/>
+                  </div>
+                  <div className="vidstats">
+                    <img src="img/stats.png" alt=""/>
+                  </div>
+                </div>
+
+                <div className="vidcomp">
+                  <div className="vidnum">
+                    <div className="num">
+                    <span>1</span>
+                    </div>
+                    <i className="fas fa-chevron-circle-down"></i>
+                  </div>
+                  <div className="vidthumb">
+                      <img className="thumb" src="img/thumb.png" alt=""/>
+                      <div className="thumbdesc">
+                        <div className="thumbtitle">
+                          Kanye West & Lil Pump Ft Adele Givens - "I Love It" (Official Video)
+                        </div>
+                        <div className="report">
+                        <i className="fas fa-flag"></i>
+                        Reason:<i className="fas fa-info-circle"></i></div>
+                      </div>
+
+                  </div>
+                  <div className="vidgraph">
+                    <img src="img/graph.png" alt=""/>
+                  </div>
+                  <div className="vidstats">
+                    <img src="img/stats.png" alt=""/>
+                  </div>
+                </div>
+
+                <div className="vidcomp">
+                  <div className="vidnum">
+                    <div className="num">
+                    <span>1</span>
+                    </div>
+                    <i className="fas fa-chevron-circle-down"></i>
+                  </div>
+                  <div className="vidthumb">
+                      <img className="thumb" src="img/thumb.png" alt=""/>
+                      <div className="thumbdesc">
+                        <div className="thumbtitle">
+                          Kanye West & Lil Pump Ft Adele Givens - "I Love It" (Official Video)
+                        </div>
+                        <div className="report">
+                        <i className="fas fa-flag"></i>
+                        Reason:<i className="fas fa-info-circle"></i></div>
+                      </div>
+
+                  </div>
+                  <div className="vidgraph">
+                    <img src="img/graph.png" alt=""/>
+                  </div>
+                  <div className="vidstats">
+                    <img src="img/stats.png" alt=""/>
+                  </div>
+                </div>
+
+                <div className="vidcomp">
+                  <div className="vidnum">
+                    <div className="num">
+                    <span>1</span>
+                    </div>
+                    <i className="fas fa-chevron-circle-down"></i>
+                  </div>
+                  <div className="vidthumb">
+                      <img className="thumb" src="img/thumb.png" alt=""/>
+                      <div className="thumbdesc">
+                        <div className="thumbtitle">
+                          Kanye West & Lil Pump Ft Adele Givens - "I Love It" (Official Video)
+                        </div>
+                        <div className="report">
+                        <i className="fas fa-flag"></i>
+                        Reason:<i className="fas fa-info-circle"></i></div>
+                      </div>
+
+                  </div>
+                  <div className="vidgraph">
+                    <img src="img/graph.png" alt=""/>
+                  </div>
+                  <div className="vidstats">
+                    <img src="img/stats.png" alt=""/>
+                  </div>
+                </div>
+
+              </div>
+            );
+        }
+    }
+
+  ReactDOM.render(
+      <MainPage />,
+      document.getElementById('root')
+  );
+  </script>
+
+
+</body>
+</html>
